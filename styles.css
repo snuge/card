@@ -1,0 +1,131 @@
+* {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #ff9800, #ffa726);
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  perspective: 150rem;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+}
+
+.card__side {
+  height: 15rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 30rem;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.card__side--front {
+  background-color: #1c1c1c;
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+  background-color: #1c1c1c;
+  padding: 16px;
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
+.card__cont {
+  height: 15rem;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__cta,
+.card__cta-1 {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__cta p {
+  margin-left: 1rem;
+}
+
+.card__cta p > .space {
+  margin-left: 2rem;
+}
+
+.logo-1 {
+  font-size: 50px;
+  letter-spacing: 0.5em;
+  margin-left: 10px;
+}
+
+.qr-code {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100%;
+}
+
+.contact-info {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.code {
+  display: flex;
+  float: left;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  line-height: 2em;
+  letter-spacing: 0.2em;
+color: white;
+}
+div > a {
+  text-decoration: none;
+}
+body > div > div > div.card__side.card__side--back > div > div.contact-info > div > span:nth-child(5) > a{
+  text-decoration: none;
+}
